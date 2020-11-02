@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale =1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="image/mini_logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <title>myprofile</title>
+</head>
+
+<body>
+    <?php
+        session_start();  //로그인 처리가 된 경우
+        if(isset($_SESSION['id'])){
+    ?>
+
+    <!----------------로그인 후 화면-------------------->
+    <div id="container">
+        <div id="header">
+            <p><a href="index.php"><img src="image/logo1.png" alt="로고" width="15%"></a></p>
+            <div class="cart">
+                <a href="cart.html">
+                    <img src="image/cart.png" alt="pic" width="100%">
+                </a>
+            </div>
+            <div id="top_bar1">
+                <p>777 EVENT <span>UP TO 70% ~</span></p>
+                <p id="btn_close"><a href="#"><img src="image/w_close.png" alt="pic"></a></p>
+            </div>
+            <div id="nav">
+                <a href="#" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <div class="overlay">
+                    <div class="search_box">
+                        <form action="#" id="searchform" methode="get">
+                            <input type="text" class="search" placeholder="SEARCH ME!">
+                            <label for="keyword" id="keyword" class="inputtext" value="keyword">
+                                <a href="#"><img src="image/b_search.png" alt="pic"></a>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="man.html" class="m_open1">MEN</a></li>
+                            <li><a href="woman.html" class="m_open2">WOMEN</a></li>
+                            <li><a href="acc.html" class="m_open3">ACC</a></li>
+                            <li><a href="home.html" class="m_open4">HOME</a></li>
+                            <li><a href="culture.html" class="m_open5">CULTURE</a></li>
+                            <li><a href="black.html" class="m_open6">EVENT</a></li>
+                            <li class="submenu">
+                                <dl>
+                                    <dd><a href="acc.php">LOGIN</a></dd>
+                                    <dd><a href="#">JOIN</a></dd>
+                                    <dd><a href="mypage1.html">ORDER</a></dd>
+                                    <dd><a href="#">CART</a></dd>
+                                    <dd class="lan"><span><a href="#">KOR▼</a></span>
+                                        <dl class="lan_1">
+                                            <dd>
+                                                <a href="#">KOR</a>
+                                                <a href="#">ENG</a>
+                                                <a href="#">CHN</a>
+                                            </dd>
+                                        </dl>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div class="mo_sns">
+                            <ul>
+                                <li><a href="https://www.instagram.com/"><img src="image/instagram.png" alt="pic" width="5%"></a></li>
+                                <li><a href="https://www.youtube.com/"><img src="image/youtube.png" alt="pic" width="5%"></a></li>
+                                <li><a href="https://www.youtube.com/"><img src="image/facebook.png" alt="pic" width="5%"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------hidden1-------------------------------->
+            <div class="hidden1">
+                <div class="hidden_1">
+                    <ul class="h_1"><a href="manouter.html">OUTER</a>
+                        <li><a href="manouter.html">COAT</a></li>
+                        <li><a href="manouter.html">JACKET</a></li>
+                        <li><a href="manouter.html">BUBBLE JACKET</a></li>
+                        <li><a href="manouter.html">FRIES</a></li>
+                        <li><a href="manouter.html">DOWN</a></li>
+                        <li><a href="manouter.html">JUMPER</a></li>
+                        <li><a href="manouter.html">ROBE</a></li>
+                        <li><a href="manouter.html">TRENCH COAT</a></li>
+                    </ul>
+                    <ul class="h_1"><a href="manbottom.html">BOTTOM</a>
+                        <li><a href="manbottom.html">DEMIM PANTS</a></li>
+                        <li><a href="manbottom.html">SLACKS PANTS</a></li>
+                        <li><a href="manbottom.html">CAGO PANTS</a></li>
+                        <li><a href="manbottom.html">CHINOS PANTS</a></li>
+                        <li><a href="manbottom.html">WIDE PANTS</a></li>
+                        <li><a href="manbottom.html">SHORT PANTS</a></li>
+                        <li><a href="manbottom.html">TRAINING PANTS</a></li>
+                        <li><a href="manbottom.html">JEAN</a></li>
+                    </ul>
+                    <ul class="h_1 bt"><a href="mantop.html">TOP</a>
+                        <li><a href="mantop.html">LONG SLEEVED SHIRT</a></li>
+                        <li><a href="mantop.html">SHORT SLEEVED SHIRT</a></li>
+                        <li><a href="mantop.html">SLEEVELESS</a></li>
+                        <li><a href="mantop.html">HOODE</a></li>
+                        <li><a href="mantop.html">CASUAL SHIRT</a></li>
+                        <li><a href="mantop.html">DRESS SHIRT</a></li>
+                        <li><a href="mantop.html">MAN TO MAN</a></li>
+                    </ul>
+                    <ul class="h_1 bt1">
+                        <li><a href="manknit.html">KNIT WEAR</a></li>
+                        <li><a href="manknit.html">PULLOVER</a></li>
+                        <li><a href="manknit.html">CADIGAN</a></li>
+                        <li><a href="manknit.html">TUTLENECK</a></li>
+                    </ul>
+                    <ul class="h_1 slide_i">
+                        <div class="swiper-container swiper1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="image/sl/m_slide7.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>브라운 야드<br> FW19 <br>쇼케이스</h2>
+                                        <p>성별에 구애받지 않고 즐기는<br> 브라운 야드 단독 5%</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/sl/m_slide8.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>위메농 19AW<br> 쇼케이스 <br>오늘이 마지막!</h2>
+                                        <p>생기넘치는 쎼시족 라이프</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/sl/m_slide9.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>실시간 인기<br>검색어 #<br>카디건</h2>
+                                        <p>올가을엔 새로나온 카디건을 <br>입어보세요</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/sl/m_slide10.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2><br>오늘 뭐 입고<br>출근하지?</h2>
+                                        <p>고민 없이 매일 입기 좋은 어른들의 교복</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/sl/m_slide11.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>깊어지는<br>가을의 아우터 <br>스타일링</h2>
+                                        <p>추천하는 유형별 아우터 <br>스타일링 팁을 확인해보세요</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/sl/m_slide12.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2><br><br>LIMAS</h2>
+                                        <p>쇼케이스 기념 전상품 20% + 5%<br> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!-------------------------------hidden2-------------------------------->
+            <div class="hidden2">
+                <div class="hidden_2">
+                    <ul class="h_1"><a href="womanouter.html">OUTER</a>
+                        <li><a href="womanouter.html">COAT</a></li>
+                        <li><a href="womanouter.html">JACKET</a></li>
+                        <li><a href="womanouter.html">BUBBLE JACKET</a></li>
+                        <li><a href="womanouter.html">FRIES</a></li>
+                        <li><a href="womanouter.html">DOWN</a></li>
+                        <li><a href="womanouter.html">JUMPER</a></li>
+                        <li><a href="womanouter.html">ROBE</a></li>
+                        <li><a href="womanouter.html">TRENCH COAT</a></li>
+                    </ul>
+                    <ul class="h_1"><a href="womanbottom.html">BOTTOM</a>
+                        <li><a href="womanbottom.html">SKINY PANTS</a></li>
+                        <li><a href="womanbottom.html">WIDE PANTS</a></li>
+                        <li><a href="womanbottom.html">SHORT PANTS</a></li>
+                        <li><a href="womanbottom.html">SKIRT</a></li>
+                        <li><a href="womanbottom.html">WIDE PANTS</a></li>
+                        <li><a href="womanbottom.html">SHORT PANTS</a></li>
+                        <li><a href="womanbottom.html">TRAINING PANTS</a></li>
+                        <li><a href="womanbottom.html">JEAN</a></li>
+                    </ul>
+                    <ul class="h_1 bt"><a href="womantop.html">TOP</a>
+                        <li><a href="womantop.html">LONG SLEEVED SHIRT</a></li>
+                        <li><a href="womantop.html">SHORT SLEEVED SHIRT</a></li>
+                        <li><a href="womantop.html">SLEEVELESS</a></li>
+                        <li><a href="womantop.html">HOODE</a></li>
+                        <li><a href="womantop.html">CASUAL SHIRT</a></li>
+                        <li><a href="womantop.html">DRESS SHIRT</a></li>
+                        <li><a href="womantop.html">MAN TO MAN</a></li>
+                    </ul>
+                    <ul class="h_1 bt1"><a href="womanknit.html">KNIT WEAR</a <li><a href="womanknit.html">PULLOVER</a></li>
+                        <li><a href="womanknit.html">CADIGAN</a></li>
+                        <li><a href="womanknit.html">TUTLENECK</a></li>
+                    </ul>
+
+                    <ul class="h_1 slide_i">
+                        <div class="swiper-container swiper1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="image/w_slide1.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>브라운 야드<br> FW19 <br>쇼케이스</h2>
+                                        <p>성별에 구애받지 않고 즐기는<br> 브라운 야드 단독 5%</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/w_slide2.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>위메농 19AW<br> 쇼케이스 <br>오늘이 마지막!</h2>
+                                        <p>생기넘치는 쎼시족 라이프</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/w_slide3.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>실시간 인기<br>검색어 #<br>카디건</h2>
+                                        <p>올가을엔 새로나온 카디건을 <br>입어보세요</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/w_slide4.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2><br>오늘 뭐 입고<br>가지?</h2>
+                                        <p>고민 없이 매일 입기 좋은 어른들의<br> 교복</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/w_slide5.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>깊어지는<br>가을의 아우터 <br>스타일링</h2>
+                                        <p>Hey가 추천하는 유형별 아우터 <br>스타일링 팁을 확인해보세요</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/w_slide6.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2><br><br>LIMAS</h2>
+                                        <p>쇼케이스 기념 전상품 20% + 5%<br> </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/w_slide7.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>가벼운 아우터<br> 걸치기 좋은 <br>계절</h2>
+                                        <p>옷장을 자꾸 열었다 닫았다 하게 되죠?<br> hey 아우터 기획전을 꼭 ...</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/w_slide8.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2><br><br>POLAROID</h2>
+                                        <p>다양한 이벤트에 지금 참여해 보세요<br> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!-------------------------------hidden3-------------------------------->
+            <div class="hidden3">
+                <div class="hidden_3">
+                    <ul class="h_1"><a href="acc_bags.html">BAGS</a>
+                        <li><a href="acc_bags.html">CANVERS BAG</a></li>
+                        <li><a href="acc_bags.html">LEATHER BAG</a></li>
+                        <li><a href="acc_bags.html">SHOULDER BAG</a></li>
+                        <li><a href="acc_bags.html">TOTE BAG</a></li>
+                        <li><a href="acc_bags.html">BACK PACK</a></li>
+                        <li><a href="acc_bags.html">CLUTCH</a></li>
+                        <li><a href="acc_bags.html">POUCH</a></li>
+                        <li><a href="acc_bags.html">BAG ACCESSORIES</a></li>
+                    </ul>
+                    <ul class="h_1"><a href="acc_shoes.html">SHOES</a>
+                        <li><a href="acc_shoes.html">PLATS / LOAFERS</a></li>
+                        <li><a href="acc_shoes.html">PUMPS / HIGH HEELS</a></li>
+                        <li><a href="acc_shoes.html">SNEAKERS</a></li>
+                        <li><a href="acc_shoes.html">BOOTS</a></li>
+                        <li><a href="acc_shoes.html">SANDAL</a></li>
+                        <li><a href="acc_shoes.html">SPORT SANDAL</a></li>
+                        <li><a href="acc_shoes.html">SHOES ACCESSORIES</a></li>
+                    </ul>
+                    <ul class="h_1"><a href="acc_jew.html">JEWELRY</a>
+                        <li><a href="acc_jew.html">NECKLACE</a></li>
+                        <li><a href="acc_jew.html">EARWEAR</a></li>
+                        <li><a href="acc_jew.html">RING</a></li>
+                        <li><a href="acc_jew.html">BRACELET
+                                <!--팔찌--></a></li>
+                        <li><a href="acc_jew.html">ANKLET
+                                <!--발찌--></a></li>
+                        <li><a href="acc_jew.html">BROOCH</a></li>
+                        <li><a href="acc_jew.html">HEAR ACCESSORIES</a></li>
+                    </ul>
+                    <ul class="h_1"><a href="acc_eye.html">EYEWEAR</a>
+                        <li><a href="acc_eye.html">GLASSES</a></li>
+                        <li><a href="acc_eye.html">SUNGLASSES</a></li>
+                        <li><a href="acc_eye.html">SLEEPING PATCH</a></li>
+                    </ul>
+                    <ul class="h_1 slide_i">
+                        <div class="swiper-container swiper1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="image/a_slide1.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>브라운 야드<br> FW19 <br>쇼케이스</h2>
+                                        <p>성별에 구애받지 않고 즐기는<br> 브라운 야드 단독 5%</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/a_slide2.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>위메농 19AW<br> 쇼케이스 <br>오늘이 마지막!</h2>
+                                        <p>생기넘치는 쎼시족 라이프</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/a_slide3.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>실시간 인기<br>검색어 #<br>카디건</h2>
+                                        <p>올가을엔 새로나온 카디건을 <br>입어보세요</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/a_slide4.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2><br>오늘 뭐 입고<br>가지?</h2>
+                                        <p>고민 없이 매일 입기 좋은 어른들의<br> 교복</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/a_slide5.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2>깊어지는<br>가을의 아우터 <br>스타일링</h2>
+                                        <p>Hey가 추천하는 유형별 아우터 <br>스타일링 팁을 확인해보세요</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/a_slide6.jpg" alt="사진" width="100%">
+                                    <div class="img_text">
+                                        <h2><br><br>LIMAS</h2>
+                                        <p>쇼케이스 기념 전상품 20% + 5%<br> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="aside">
+            <a href="#"><img src="image/btn_sctop_b.png" alt="pic"></a>
+        </div>
+        <!----------------본문 시작 --------------->
+        <div id="wrap" class="clearfix">
+            <!--고객정보박스-->
+            <div id="mycontent">
+                <div class="mycontent_in1 clearfix">
+                    <div class="no6">
+                        <p>회원등급</p>
+                        <a href="#"><span>No6</span>
+                            <div class="click">
+                                <p>회원등급혜택안내</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mycontent_in2">
+                    <a href="#">
+                        <div class="mycontent_in_box click_m">
+                            <p>MILEAGE</p>
+                            <span>0원</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="mycontent_in2">
+                    <a href="#">
+                        <div class="mycontent_in_box coupon_down">
+                            <p>COUPON</p>
+                            <span>1</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--로그인 정보-->
+            <h1 class="title_h">회원정보수정</h1>
+            <div class="sub_title1">
+                <p>로그인정보</p>
+            </div>
+            <div class="login">
+                <div class="login_in">
+                    <div class="log_tit">
+                        <p>아이디</p>
+                    </div>
+                    <div class="log_cont">
+                        <span class="sp1">my7676@naver.com</span>
+                        <button class="log_btn"><a href="#">변경</a></button>
+                    </div>
+                </div>
+                <!--변경 부분-->
+                <form action="#" method="post" class="chage_form">
+                    <input type="text">
+                    <button type="submit" class="chg_btn_1">
+                        인증메일발송
+                    </button>
+                    <button class="chg_btn_2 cen1">취소</button>
+                </form>
+                <div class="login_in">
+                    <div class="log_tit">
+                        <p>비밀번호</p>
+                    </div>
+                    <div class="log_cont">
+                        <span class="sp2">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <button class="log_btn2"><a href="#">변경</a></button>
+                    </div>
+                </div>
+                <form action="#" method="post" class="chage_form2">
+                    <input type="text" placeholder="현재 비밀번호">
+                    <input type="text" placeholder="신규 비밀번호">
+                    <input type="text" placeholder="신규 비밀번호 변경">
+                    <button type="submit" class="chg_btn_3">
+                        변경완료
+                    </button>
+                    <button class="chg_btn_2 cen2">취소</button>
+                </form>
+                <div class="login_in bottom">
+                    <div class="log_tit">
+                        <p>sns 연결</p>
+                    </div>
+                    <ul class="sns_ic">
+                        <li><img src="image3/naver.png" alt="네이버아이콘"></li>
+                        <li><img src="image3/facebook1.png" alt="페이스북이모티콘"></li>
+                        <li><img src="image3/kakao.png" alt="카카오톡이모티콘"></li>
+                    </ul>
+                </div>
+            </div>
+            <!--회원 정보-->
+            <div class="sub_title1">
+                <p>회원정보</p>
+            </div>
+            <div class="custom">
+                <div class="custom_in">
+                    <div class="custom_tit">
+                        <p>성명</p>
+                    </div>
+                    <div class="custom_cont">
+                        <span>이보아</span>
+                    </div>
+                </div>
+                <div class="custom_in">
+                    <div class="custom_tit">
+                        <p>연락처</p>
+                    </div>
+                    <div class="custom_cont">
+                        <span>010-2222-333</span>
+                    </div>
+                </div>
+                <div class="custom_in">
+                    <div class="custom_tit">
+                        <p>생일</p>
+                    </div>
+                    <div class="custom_cont">
+                        <span>1991년09월30일</span>
+                    </div>
+                </div>
+                <div class="custom_in">
+                    <div class="custom_tit">
+                        <p>성별</p>
+                    </div>
+                    <div class="custom_cont">
+                        <span>여</span>
+                    </div>
+                </div>
+                <div class="custom_bnt">
+                    <a href="#">본인인증으로 정보 수정하기</a>
+                </div>
+            </div>
+            <!--주소-->
+            <div class="address">
+                <div class="adr_in">
+                    <div class="adr_tit">
+                        <p>주소</p>
+                    </div>
+                    <div class="adr_cont">
+                        <div class="adr_box"></div>
+                        <button class="adr_btn"><a href="#">우편번호검색</a></button>
+                    </div>
+                </div>
+                <!--주소검색-->
+                <div class="hidden_adr">
+                    <form action="#" method="get">
+                        <input type="text" class="adr_find" placeholder="우편번호를 입력해주세요">
+                        <input type="submit" value="검색" class="search">
+                    </form>
+                    <p>아래와 같은 조합으로 검색을 하시면 더욱 정확한 결과가 검색됩니다. </p>
+                    <dl class="searcch_inf">
+                        <dt>도로명 + 건물번호</dt>
+                        <dl>예) 판교역로 235, 제주 첨단로 242</dl>
+                        <dt>지역명(동/리) + 번지</dt>
+                        <dl>예) 삼평동 681, 제주 영평동 2181</dl>
+                        <dt>지역명(동/리) + 건물명(아파트명)</dt>
+                        <dl>예) 분당 주공, 연수동 주공3차</dl>
+                        <dt>사서함명 + 번호</dt>
+                        <dl class="dl_img clearfi">예) 분당우체국사서함 1~100
+                            <a href="#"><img src="image3/close1.png" alt="닫기"></a></dl>
+                    </dl>
+                </div>
+                <div class="adr_box2 "></div>
+                <div class="adr_box2"></div>
+                <div class="adr_bnt2">
+                    <a href="#">저장</a>
+                </div>
+            </div>
+
+            <!--광고성 정보 수신-->
+            <div class="sub_title1">
+                <p>광고성 정보 수신</p>
+            </div>
+            <div class="check">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="icon"></span>
+                    <span class="text">문자메세지</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="icon"></span>
+                    <span class="text">이메일</span>
+                </label>
+            </div>
+            <div class="ok">
+                <p>서비스의 중요 안내사항 및 주문.배송에 대한 정보는 위 수신 여부와 관계없이 발송됩니다.</p>
+            </div>
+            <!--회원 탈퇴 -->
+            <div class="out"><a href="#">회원탈퇴하기</a></div>
+            <div class="cencel clearfix">
+                <a href="#"><img src="image3/close.png" alt="닫기" class="close2"></a>
+                <p>정말 탈퇴 하시겠습니까? </p>
+                <form action="delete.php" method="post" class="chage_form_out">
+                    <select name="bye">
+                        <option value="email">1.이메일</option>
+                        <option value="irum">2.이름</option>
+                    </select>
+                    <input type="text" name="email" placeholder="이메일 또는 이름 입력">
+                    <br>
+                    <input type="submit" value="회원탈퇴하기" class="idontknow">
+                    <input type="reset" value="취소" class="no">
+                </form>
+                <div class="join_out">
+                    <a href="join_member_view.php" class="mb "> 멤버리스트 </a>
+                </div>
+            </div>
+        </div>
+        <!----- 팝업창----->
+        <div class="popup_bg"></div>
+        <div class="popup">
+            <h2><img src="image/title.png" alt="제목"></h2>
+            <table class="membership_table">
+                <tbody>
+                    <tr class="purple">
+                        <th>회원정보</th>
+                        <th>NO6</th>
+                        <th>NO5</th>
+                        <th>NO4</th>
+                        <th>NO3</th>
+                        <th>NO2</th>
+                        <th>NO1</th>
+                    </tr>
+                    <tr>
+                        <th>등급기준</th>
+                        <td>10만원미만</td>
+                        <td>10만원 이상<br>
+                            - <br>
+                            30만원미만
+
+                        </td>
+                        <td>
+                            30만원 이상<br>
+                            - <br>
+                            50만원미만
+                        </td>
+                        <td>
+                            50만원 이상<br>
+                            - <br>
+                            100만원미만
+                        </td>
+                        <td>
+                            100만원 이상<br>
+                            - <br>
+                            200만원미만
+                        </td>
+                        <td>
+                            200만원이상
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>추가적립</th>
+                        <td> 0% 적립 </td>
+                        <td> 1% 적립 </td>
+                        <td> 2% 적립 </td>
+                        <td> 2% 적립 </td>
+                        <td> 3% 적립</td>
+                        <td> 3% 적립</td>
+                    </tr>
+                    <tr>
+                        <th>추가할인</th>
+                        <td> 0% 할인 </td>
+                        <td> 1% 할인 </td>
+                        <td> 1% 할인 </td>
+                        <td> 2% 할인 </td>
+                        <td> 2% 할인</td>
+                        <td> 3% 할인</td>
+                    </tr>
+                    <tr>
+                        <th>배송</th>
+                        <td></td>
+                        <td>무료배송쿠폰<br>한장 발급</td>
+                        <td>무료배송쿠폰<br>한장 발급</td>
+                        <td>무료배송쿠폰<br>한장 발급</td>
+                        <td>무료배송</td>
+                        <td>무료배송</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">할인쿠폰</th>
+                        <td>신규가입시<br>5,000원 쿠폰</td>
+                        <td>1,000원 할인쿠폰<br>월1장</td>
+                        <td>2,000원 할인쿠폰<br> 월1장</td>
+                        <td>3,000원 할인쿠폰<br> 월1장</td>
+                        <td>5,000원 할인쿠폰<br> 월1장</td>
+                        <td>5,000원 할인쿠폰<br> 월2장</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">생일할인쿠폰 10%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>주의사항</h3>
+            <ul class="notice">
+                <li>주문으로 발생한 적립금은 배송완료후 3일이내에 지급됩니다.</li>
+                <li>적립금은 구매건에 대한 10%까지만 사용가능합니다.(배송비 제외한 제품 가격)</li>
+                <li>적립금은 회원 탈퇴 시 자동으로 소멸됩니다.</li>
+                <li>쿠폰간의 중복사용이 불가능합니다</li>
+                <li>회원등급, 적립금, 쿠폰은 MY PAGE에서 확인 가능합니다.</li>
+            </ul>
+            <a href="#"><img src="image/close.png" alt="닫기버튼" class="close"></a>
+        </div>
+        <div class="coupon">
+            <div class="coupon_box">
+                <a href="#"><img src="image/close.png" alt="닫기버튼" class="close2"></a>
+                <h4><img src="image/coupon2.jpg" alt="쿠폰"></h4>
+                <table class="coupon_table">
+                    <tbody class="coupon_table">
+                        <tr>
+                            <th>회원정보</th>
+                            <th>쿠폰명</th>
+                            <th>쿠폰적용상품</th>
+                            <th>구매금액</th>
+                            <th>쿠폰혜택</th>
+                            <th>사용가능기간</th>
+                        </tr>
+                        <tr>
+                            <td> 신규가입쿠폰 </td>
+                            <td> 쿠폰적용상품 </td>
+                            <td> 구매금액 </td>
+                            <td> 쿠폰해택 </td>
+                            <td> 2019.11.20<br>
+                                -<br>
+                                2020.03.05
+                            </td>
+                            <td> 3% 적립</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ol class="paging">
+                    <li class="prev"><a href="#">이전으로</a></li>
+                    <li class="on"><a href="non.html">1</a></li>
+                    <li class="next"><a href="#">다음페이지</a></li>
+                </ol>
+            </div>
+        </div>
+
+
+        <!-------------본문끝 푸터 시작 ------------------>
+
+        <div id="footer clearfix">
+            <div class="footer_box">
+                <div class="f_box">
+                    <div class="online">
+                        <p>ONLINE STORE</p>
+                    </div>
+                    <div class="another_f">
+                        <div class="tel_info">
+                            <p><strong>1544-0000</strong></p>
+                            <p>(10:00 - 18:00, LUNCH : 12:00 - 13:30)</p>
+                        </div>
+                        <a href="#" class="partners_btn">
+                            <span>partnership</span>
+                            <span>collaboration</span>
+                            <span>sponsorship</span>
+                        </a>
+
+                        <ul class="guide_list">
+                            <li><a href="#">HELP</a></li>
+                            <li><a href="#">AGREEMENT</a></li>
+                            <li><a href="#">PRIVACY POLICY
+                                    <!-- 개인정보처리방침 --></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f_box">
+                    <div class="online offline">
+                        <p class="off">OFFLINE STORE</p>
+                    </div>
+                    <div class="another_f1">
+                        <div class="tel_info">
+                            <p><strong>OURSTORE FLAGSHIP STORE</strong></p>
+                            <p>94-12, Eoulmadang-ro, Mapo-gu, Seoul</p>
+                            <p>SUN - THU 11:00 - 21:00<br>
+                                FRI - SAT 11:00 - 22:00</p>
+                        </div>
+                        <ul class="sns">
+                            <li><a href="#"><img src="image/instagram.png" alt="pic" width="100%"></a></li>
+                            <li><a href="#"><img src="image/youtube.png" alt="pic" width="100%"></a></li>
+                            <li><a href="#"><img src="image/facebook.png" alt="pic" width="100%"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f_box">
+                    <div class="scrollbox">
+                        <div class="sc_item">
+                            <div class="title">Lotte Young Plaza Store Myeongdong</div>
+                            <div class="st_info">4F, Lotte Young Plaza Store Myeongdong, 67, Namdaemun-ro, Jung-gu, Seoul<br>T. +82 02-2118-5224<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Lotte Department Store Jamsil</div>
+                            <div class="st_info">8F, Lotte Department Store Jamsil, 240, Olympic-ro, Songpa-gu, Seoul<br>T. +82 02-2143-7767<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Lotte Department Store Gimpo Airport</div>
+                            <div class="st_info">GF, Lotte Department Store Gimpo Airport, 38, Haneul-gil, Gangseo-gu, Seoul<br>T. +82 02-6116-2965‬<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Lotte Department Store Nowon</div>
+                            <div class="st_info">8F, Lotte Department Store Nowon, 1414, Dongil-ro, Nowon-gu, Seoul<br>T. +82 02-950-2807‬<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Lotte Department Store Cheongnyangni</div>
+                            <div class="st_info">B1F, Lotte Department Store Cheongnyangni, 214, Wangsan-ro, Dongdaemun-gu, Seoul<br>T. +82 02-3707-1088<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Lotte Department Store Gangnam</div>
+                            <div class="st_info">6F, Lotte Department Store Gangnam, 401, Dogok-ro, Gangnam-gu, Seoul<br>T. +82 02-531-2667<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Shinsegae Department Store Gangnam</div>
+                            <div class="st_info">8F, Shinsegae Department Store Gangnam, 176, Sinbanpo-ro, Seocho-gu, Seoul<br>T. +82 02-3479-1823<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Shinsegae Duty Free Shop Myeongdong</div>
+                            <div class="st_info">12F, Shinsegae Duty Free Shop Myeong-dong, 77, Toegye-ro, Jung-gu, Seoul<br>T. +82 02-6370-4292<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Hyundai Department Store Sinchon</div>
+                            <div class="st_info">B1F, Hyundai Department Store Sinchon, 83, Sinchon-ro, Seodaemun-gu, Seoul<br>T. +82 02-3145-1799<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Hyundai Department Store D-cube City</div>
+                            <div class="st_info">B1F, Hyundai Department Store D-cube City, 662, Gyeongin-ro, Guro-gu, Seoul<br>T. +82 02-2210-9214<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Hyundai Department Store U-plex Mokdong</div>
+                            <div class="st_info">B2F, Hyundai Department Store U-plex Mokdong, 257, Mokdongdong-ro, Yangcheon-gu, Seoul<br>T. +82 02-2163-2298<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Hyundai Department Store Cheonho</div>
+                            <div class="st_info">B1F, Hyundai Department Store Cheonho, 1005, Cheonho-daero, Gangdong-gu, Seoul<br>T. +82 02-2225-8926<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Mario Outlet Gasan</div>
+                            <div class="st_info">4F, Mario Outlet 3, 23, Digital-ro 9-gil, Geumcheon-gu, Seoul<br>T. +82 02-2067-2252<br></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="f_box">
+                    <div class="scrollbox">
+                        <div class="sc_item">
+                            <div class="title">Lotte Young Plaza Store Myeongdong</div>
+                            <div class="st_info">4F, Lotte Young Plaza Store Myeongdong, 67, Namdaemun-ro, Jung-gu, Seoul<br>T. +82 02-2118-5224<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Lotte Department Store Jamsil</div>
+                            <div class="st_info">8F, Lotte Department Store Jamsil, 240, Olympic-ro, Songpa-gu, Seoul<br>T. +82 02-2143-7767<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Lotte Department Store Gimpo Airport</div>
+                            <div class="st_info">GF, Lotte Department Store Gimpo Airport, 38, Haneul-gil, Gangseo-gu, Seoul<br>T. +82 02-6116-2965‬<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Lotte Department Store Nowon</div>
+                            <div class="st_info">8F, Lotte Department Store Nowon, 1414, Dongil-ro, Nowon-gu, Seoul<br>T. +82 02-950-2807‬<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Lotte Department Store Cheongnyangni</div>
+                            <div class="st_info">B1F, Lotte Department Store Cheongnyangni, 214, Wangsan-ro, Dongdaemun-gu, Seoul<br>T. +82 02-3707-1088<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Lotte Department Store Gangnam</div>
+                            <div class="st_info">6F, Lotte Department Store Gangnam, 401, Dogok-ro, Gangnam-gu, Seoul<br>T. +82 02-531-2667<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Shinsegae Department Store Gangnam</div>
+                            <div class="st_info">8F, Shinsegae Department Store Gangnam, 176, Sinbanpo-ro, Seocho-gu, Seoul<br>T. +82 02-3479-1823<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Shinsegae Duty Free Shop Myeongdong</div>
+                            <div class="st_info">12F, Shinsegae Duty Free Shop Myeong-dong, 77, Toegye-ro, Jung-gu, Seoul<br>T. +82 02-6370-4292<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Hyundai Department Store Sinchon</div>
+                            <div class="st_info">B1F, Hyundai Department Store Sinchon, 83, Sinchon-ro, Seodaemun-gu, Seoul<br>T. +82 02-3145-1799<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Hyundai Department Store D-cube City</div>
+                            <div class="st_info">B1F, Hyundai Department Store D-cube City, 662, Gyeongin-ro, Guro-gu, Seoul<br>T. +82 02-2210-9214<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Hyundai Department Store U-plex Mokdong</div>
+                            <div class="st_info">B2F, Hyundai Department Store U-plex Mokdong, 257, Mokdongdong-ro, Yangcheon-gu, Seoul<br>T. +82 02-2163-2298<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Hyundai Department Store Cheonho</div>
+                            <div class="st_info">B1F, Hyundai Department Store Cheonho, 1005, Cheonho-daero, Gangdong-gu, Seoul<br>T. +82 02-2225-8926<br></div>
+                        </div>
+
+                        <div class="sc_item">
+                            <div class="title">Mario Outlet Gasan</div>
+                            <div class="st_info">4F, Mario Outlet 3, 23, Digital-ro 9-gil, Geumcheon-gu, Seoul<br>T. +82 02-2067-2252<br></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="f_box1">
+                    <a href="#"><img src="image/down-chevron.png" alt="pic"></a>
+                    <div class="f_logo">
+                        <img src="image/logo1.png" alt="logo" width="10%">
+                        <p>OURNAME. CO., LTD. | CS CENTER : 1544-0000 (10:00 - 18:00, LUNCH : 12:00 - 13:30) | (06173) 1st floor, (SamSeong-dong) 14, Teheran-ro 103-gil, Gangnam-gu, Seoul, Korea | CEO : BOA, SAN, YUNA
+                            Business Registration No : [828-88-00000] [사업자정보확인] | E-commerce Permit Registration No : 2017-SeoulGangnam-01563 | Personal Information Manager : CHOE YUNA (my7676@naver.com)
+                            COPYRIGHT © 2019 NERDY
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/popup.js"></script>
+        <script src="js/popup2.js"></script>
+        <script src="js/adress.js"></script>
+        <script src="js/chage_inf.js"></script>
+        <script>
+            $(".f_box1 > a > img").click(function() {
+                event.preventDefault();
+                $(".f_logo").slideToggle('fast');
+            });
+
+            $(".lan > span").click(function() {
+                $(".lan_1").slideToggle('fast');
+            });
+        </script>
+</body>
+
+</html>

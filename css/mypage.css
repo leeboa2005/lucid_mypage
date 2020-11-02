@@ -1,0 +1,165 @@
+*{padding:0; margin:0;}
+a{color:#2a2a2a; text-decoration:none;}
+li{list-style-type:none;}
+.clearfix:before, .clearfix:after{display:block; content:''; clear:both;}
+/*layout*/
+#container{margin:0 auto;}
+#wrap{width:1200px; height:auto;  margin:0px auto; margin-top:250px;}
+#mycontent{width:100%; height:168px; background:#262626; display:flex; flex-direction:row; justify-content:center;}
+section{width:100%; height:650px; margin:0 auto;}
+/*article*/
+#mycontent .mycontent_in1{width:38%; height:168px; padding-left:5%; position:relative;}
+#mycontent .mycontent_in2{width:23%; height:168px;}
+#mycontent .mycontent_in1 p {font-weight:300; padding-bottom:5px; color:#fff;}
+#mycontent .mycontent_in1 a >span{float:left;}
+#mycontent .mycontent_in1 a>.click{ float:right; padding:1px 10px; text-align:center;  border:1px solid #fff; border-radius:20px; margin-top:14px; margin-right:90px;}
+.mycontent_in1 .no6 > a >.click p {padding-top:2px; color:#fff;font-size:0.9rem; }
+.mycontent_in1 .no6 > a >span{font-size:3.1rem; color:#fff; font-weight:500;}
+.no6{width:80%; height:80px; position:absolute; top:23%; left:8%;}
+ .mycontent_in_box {width:80%; height:150px; margin:0 auto;text-align:center;}
+.mycontent_in_box p {padding-top:45px; color:#fff;}
+.mycontent_in_box span{ color:#fff; font-size:3rem;}
+/*section*/
+.mybox_total{width:100%; height:auto;}
+section .mybox{width:100%; height:280px; margin:20px auto; display:flex; flex-direction:row; justify-content:space-between;  padding-top:50px; box-sizing:border-box;}
+section .mybox li{width:31%; height:257px;  box-sizing:border-box;}
+section .mybox li:hover{border:10px solid #eaebeb;}
+section .mybox li a{text-align:center; display:block; padding:90px;}
+section .mybox li a h1{font-size:1.4rem; padding-bottom:10px; font-weight:100; text-align:center;}
+section .mybox li a p{font-size:0.9rem; font-weight:300; text-align:center;}
+section .box{margin-bottom:50px;}
+/*popup1*/
+ html{position:relative;}
+.popup_bg{width:100%; height:100%; background:rgba(0,0,0,0.6); position:absolute; top:0; left:0;  display:none;}
+.popup{width:1000px; height:1080px; background:#fff; border:1px solid #333; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:none;}
+.popup h2{width:90%; margin-top:20px; margin-left:33px; }
+.popup h2 img{ display:block; padding:10px 0; margin:0 auto;}
+.close{position:absolute; top:20px; right:20px; width:23px;}
+/*popup1 membership_table*/
+.membership_table{width:90%; height:710px; margin:30px auto; text-align:center; border-top:1px solid #333; border-bottom:1px solid #333; border-collapse:collapse;}
+.membership_table th{padding:0 8px; background:#F6F6F6; border:1px solid #e4e4e4;  }
+.membership_table td{padding:0 3px; border:1px solid #e4e4e4;}
+.purple{color:#6f04cc;}
+.purple > th:nth-child(1){color:#222;}
+/*popup1 notice*/
+.popup > h3{width:90%; margin:5px auto; text-align:left;}
+.notice{font-size:0.9rem; color:#494949; width:90%; margin:5px auto; line-height:26px;}
+.notice li:nth-child(5){font-size:1rem; padding:5px 0; font-weight:700; color:#222;}
+/*coupon*/
+.coupon{width:45%; height:370px; background:#fff; border:1px solid #333; position:absolute; top:30%; left:50%; transform:translate(-50%,-50%); display:none;}
+.coupon_box> a > .close2{ width:23px; position:absolute; top:20px; right:20px;}
+.coupon_box> h4{width:80%; margin-top:20px; margin-left:65px;}
+.coupon_box > h4 >img{display:block; padding:10px 0; margin:0 auto;}
+.coupon_table{width:90%; height:180px; margin:20px auto; text-align:center; border-collapse:collapse; }
+.coupon_table th{padding:0 5px; background:#F6F6F6; border:1px solid #e4e4e4;  }
+.coupon_table td{padding:0 3px; border:1px solid #e4e4e4;}
+/*pagingnation*/
+.paging {text-align: center; padding-top:20px;}
+.paging li {display: inline-block; vertical-align:middle;}
+.paging li a{color:#898786; font-size:1.2rem; text-decoration:none; font-weight:600; display:block;
+           width:30px; height:30px; line-height:30px;}
+.paging li.on a, .paging li a:hover {color:#3d3d3d; text-decoration:underline;}
+.paging li.prev a ,.paging li.next a {overflow:hidden; display:block; width:21px; height:21px; color:transparent; margin:0 2px;}
+.paging li.prev a {background:url(../image/left.png)  no-repeat center; margin-right:21px;}
+.paging li.next a {background:url(../image/right.png)  no-repeat center;  margin-left:21px;}
+
+/*미디어쿼리 반응형*/
+@media screen and (max-width:1860px) {.popup_bg{height:120%;}
+}
+@media screen and (max-width:1440px) {
+    html{font-size:92%;}
+    #wrap{width:85%; }
+    .no6 {width:98%;}
+    section .mybox li{height:237px;}
+    section .mybox li a {padding:80px;}
+    .popup{width:85%; height:880px;}
+    .membership_table{width:98%; height: 510px;}
+    .popup_bg{background-color:rgba(255,255,255,0);}
+    .coupon{width:65%; }
+    .coupon_table{width:95%;}
+}
+@media screen and (max-width:1024px) {
+     html{font-size:85%;}
+     #wrap{width:95%; margin-top: 200px;}
+     section{height:600px;}
+     .mycontent_in1 .no6 > a >span {font-size: 2.9rem;}
+     .mycontent_in_box span {font-size: 2.8rem;}
+     #mycontent .mycontent_in1 a>.click{margin-right:50px;}
+     #mycontent .mycontent_in1 {width: 40%;}
+     section .mybox {height:212px;}
+     section .mybox li a {padding:60px;}
+     section .mybox li{height:197px;}
+    .popup{width:95%; height:880px;}
+    .popup_bg{width:100%; }
+    .membership_table td {padding:0px;}
+    .coupon{width:80%;}
+    .coupon_box> h4{margin-left:60px;}
+    .coupon_box > h4 >img{width:30%;}
+    .paging {padding-bottom:50px;} 
+}
+
+@media screen and (max-width:768px) {
+     html{font-size:80%;}
+     #wrap{ margin-top:130px;}
+     section{height:460px;}
+    .no6{width:60%; top:21%; height:70px;}
+    .mycontent_in1 .no6 > a >span {font-size: 2.5rem;}
+    .mycontent_in_box span {font-size: 2.5rem;}
+    .mycontent_in1 p {padding-bottom:0;}
+    #mycontent .mycontent_in1{width:45%;}
+    #mycontent .mycontent_in1 a>.click{margin-right:10%; width:95%;}
+    .mycontent_in2 {width: 25%;}
+    .mycontent_in_box {width: 100%;}
+    .mycontent_in_box p {padding-top:40px;}
+    section .mybox {height:192px; margin:0 auto;}
+    section .mybox li {height: 137px;}
+    section .mybox li a {padding:26px; margin-top:16px; line-height:17px; text-align:center;}
+    section .mybox li:hover{border:6px solid #eaebeb;}
+    .popup{ font-size:80%;  width:100%; height:780px;position:absolute; top:6%; left:0%; transform:translate(0%,0%);}
+    .membership_table{width:100%; height:450px;}
+    .popup h2{margin-left:13px;}
+    .popup h2 img{width:38%;}
+    .close {width:16px;}
+    .coupon_box> a > .close2 {width: 16px;}
+    .coupon{font-size:90%; width:90%;}
+    .coupon_table{height:160px;}
+    .coupon_box> h4{margin-left:47px;}
+     .coupon_box > h4 >img{width:30%;}
+}
+
+@media screen and (max-width:480px) {
+    html{font-size:76%;}
+    #wrap{margin-top:80px;}
+    section{height:720px;}
+    #mycontent {height:158px;}
+    #mycontent .mycontent_in1 {width:37%;}
+    .no6 {width: 80%;}
+    .mycontent_in1 .no6 > a >span {font-size: 2.1rem;}
+    .mycontent_in_box span {font-size: 2.1rem;}
+    section ul.mybox{display:block; height:300px;}
+    section ul.mybox li{width:90%; margin:0 auto; height:87px;}
+    section .mybox li a {padding:0px; padding-top:10px;line-height:10px; text-align:center;}
+    section .mybox li:hover{border:4px solid #eaebeb;}
+    .popup h2 img {display: block; padding: 10px 0; margin: 0 auto; width:48%;}
+    .membership_table th {padding: 1px;}
+    .popup{ font-size:60%;  width:100%; height:830px; position:absolute; top:3.2%; left:0%; transform:translate(0%,0%);}
+    .membership_table th {padding: 0 2px;}
+    .coupon{font-size:85%; width:95%;  top:10%; left:0%; transform:translate(0%,0%);}
+    .coupon_box> h4{margin-left:32px;}
+    .coupon_table {width: 100%; height:150px;}
+}
+@media screen and (max-width:420px) {
+    .no6 {width: 92%;}
+    #mycontent {height: 138px;}
+    #mycontent .mycontent_in1{width:42%; height:128px;}
+    .mycontent_in_box p {padding-top:30px;}
+    .popup{ font-size:56%;}
+    .close {width:13px;}
+    .coupon_box> a > .close2 {width: 13px;}
+    .paging li.prev a, .paging li.next a{width:16px; height:16px;}
+     .paging li.prev a { margin-right: 8px;}
+     .paging li.next a {margin-left: 8px;}
+    .coupon{font-size:70%; width:98%;}
+    .coupon_table th {padding: 0 2px;}
+   }
+

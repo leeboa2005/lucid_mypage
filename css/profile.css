@@ -1,0 +1,309 @@
+*{padding:0; margin:0;}
+a{text-decoration:none;}
+li{list-style-type:none;}
+.clearfix:before,.clearfix:after{display:block; content:''; clear:both;}
+/*layout*/
+#wrap{width:1200px; height:auto;  margin:0px auto; margin-top:168px;}
+
+/*고객정보박스*/
+#mycontent{width:100%; height:168px; background:#262626; display:flex; flex-direction:row; justify-content:center; margin-top:250px;}
+#mycontent a{text-decoration: none;}
+#mycontent .mycontent_in1{width:38%; height:168px; padding-left:5%; position:relative;}
+#mycontent .mycontent_in2{width:23%; height:168px;}
+#mycontent .mycontent_in1 p {font-weight:300; padding-bottom:5px; color:#fff;}
+#mycontent .mycontent_in1 a >span{float:left;}
+#mycontent .mycontent_in1 a>.click{ float:right; padding:1px 10px; text-align:center;  border:1px solid #fff; border-radius:20px; margin-top:14px; margin-right:90px;}
+.mycontent_in1 .no6 > a >.click p {padding-top:2px; color:#fff;font-size:0.9rem; }
+.mycontent_in1 .no6 > a >span{font-size:3.1rem; color:#fff; font-weight:500;}
+.no6{width:80%; height:80px; position:absolute; top:23%; left:8%;}
+ .mycontent_in_box {width:80%; height:150px; margin:0 auto;text-align:center;}
+.mycontent_in_box p {padding-top:45px; color:#fff;}
+.mycontent_in_box span{ color:#fff; font-size:3rem;}
+
+/*서브타이틀 공통부분 */
+.title_h{width:100%; height:50px; text-align:left; margin-top:50px; border-bottom:3px solid #222;}
+.sub_title1{width:100%; height:40px; border-bottom:1px solid #999;}
+.sub_title2{width:100%; height:60px; border-bottom:1px solid #999; border-top:3px solid #222; margin-top:50px; margin-bottom:20px; margin-left:10px;  padding-top:20px;}
+.sub_title1 p{margin:16px 0;}
+
+/*로그인정보*/
+.login{width:100%; height:auto; border-bottom:3px solid #222; line-height:35px; text-align:left; margin-bottom:20px;}
+.login_in{height:auto;display:flex; flex-direction:row; margin-top:15px;} 
+.login_in > .log_tit{width:11%; height:35px;}
+.login_in > .log_cont{width:80%; height:35px;}
+.login_in > .log_cont >.sp1{padding-right:116px; width:200px; font-size:0.9rem; font-weight:600;}
+.login_in > .log_cont >.sp2{padding-right:129px;}
+.login_in > .log_cont >span >i { display: inline-block; width: 8px;height: 8px;border-radius: 50%;
+    background: #303033; margin-right:5px;}
+.login_in > .sns_ic{width:20%; display:flex; flex-direction:row; }
+.login_in > .sns_ic li{margin-right:20px;}
+.login_in > .sns_ic li >img{width:100%; height:auto;}
+.log_btn,.log_btn2{background:#fff; padding:5px 13px; border:1px solid #b5b5b6; border-radius:3px; text-align:center;}
+.log_btn > a,.log_btn2 >a{color:#333; font-size:0.9rem; text-decoration:none;}
+.bottom{margin-bottom:20px;}
+/*로그인 변경 부분*/
+.chage_form{width:250px; height:90px; margin-left:11%;margin-top:5px; display:none;}
+.chage_form input[type="text"]{ width:100%; height:30px; border:1px solid #ccc; margin-bottom:15px;}
+.chg_btn_1{background:#222; color:#fff; padding:6px 10px; border:1px solid #222; border-radius:3px; font-size:0.9rem; margin-right:5px;}
+.chg_btn_2{background:#fff; color:#222; padding:6px 10px; border:1px solid #999; border-radius:3px; font-size:0.9rem;}
+.chg_btn_3{background:#222; color:#fff; padding:6px 10px; border:1px solid #222; border-radius:3px; font-size:0.9rem; margin-right:5px;}
+.chage_form2{width:250px; height:180px; margin-left:11%; margin-top:5px; display:none;}
+.chage_form2 input[type="text"]{ width:100%; height:30px; border:1px solid #ccc; margin-bottom:10px; padding-left:5px;}
+/*회원정보*/
+.custom {width:100%; height:280px; border-bottom:1px solid #ccc; line-height:35px; text-align:left;}
+.custom_cont >span{font-size:0.9rem; font-weight:600;}
+.custom_in{display:flex; flex-direction:row; margin-top:15px;}
+.custom_in > .custom_tit{width:11%; height:35px;}
+.custom_bnt{background:#222; width:220px; height:40px; margin-left:11%; margin-top:12px; border-radius:4px; text-align:center}
+.custom_bnt a{color:#fff; line-height:40px;  text-decoration:none; }
+
+/*주소*/
+.address {width:100%; height:auto;  line-height:35px; text-align:left;}
+.adr_in{display:flex; flex-direction:row; margin-top:15px;}
+.adr_in > .adr_tit{width:11%; height:35px;}
+.adr_cont{width:80%; display:flex; flex-direction:row;}
+.adr_box{width:200px; height:35px; border:1px solid #dcdbdb; margin-right:10px;}
+.adr_cont > button{background:#fff; width:120px; height:40px; border:1px solid #b5b5b6; border-radius:3px; color:#777; font-size:0.9rem;}
+.adr_box2{width:280px; height:35px; border:1px solid #dbdbdb; margin-left:11%; margin-top:10px; margin-bottom:10px;}
+.adr_bnt2{background:#222; width:58px; height:40px; margin-left:11%; margin-top:12px;  border-radius:3px; text-align:center;}
+.adr_bnt2 a{color:#fff; line-height:40px;  text-decoration:none;}
+.hidden_adr{ margin-left:11%; margin-top:5px; width:530px; height:390px; border:1px solid #ccc; display:none;}
+.hidden_adr form{padding:15px 0; text-align:center; }  
+.hidden_adr form input[type="text"]{
+    height:40px;
+    border:none;
+    border-bottom:1px solid #34404b;
+    width:80%;
+    display:inline-block;
+    margin-right:10px;
+    padding-left:5px;
+}
+.search{background:url(../image3/search.png) no-repeat; border:none; }
+.hidden_adr form input[type="submit"]{display:inline-block;border:none; vertical-align:middle;color:transparent;}
+.hidden_adr > p{margin:0 5.8%; font-size:0.9rem; font-weight:700; color:#333;}
+.searcch_inf{margin:1% 5.8%;  line-height:30px;}
+.searcch_inf dt{color:#333; margin-top:6px; font-size:0.85rem;}
+.searcch_inf dl{color:#e9771b; font-weight:700; font-size:0.8rem;}
+.dl_img > a >img{width:21px; height:20px; float:right;}
+.adr_btn{background:#fff; padding:5px 13px; border:1px solid #e0e0e0; border-radius:6px;}
+.adr_btn >a{color:#333; font-size:0.9rem; text-decoration:none;}
+
+/*광고성 정보수신*/
+.check{display:flex; flex-direction:row; width:100%; height:45px;  }
+.checkbox{margin-right:20px; margin-left:10px; padding-top:15px;font-size: 0.9rem;}
+.checkbox input{ display:none;}
+.checkbox span{ display:inline-block; vertical-align: middle; cursor:pointer; margin-right:10px;}
+.checkbox .icon{ position:relative; width:21px; height:21px; border:1px solid #c8ccd4;
+                border-radius:3px; transition:background 0.1s ease; }
+.checkbox .icon::after{ content: ''; position:absolute; top:2px;  left:6px; width:6px; height:12px;
+                border-right:2px solid #fff; border-bottom:2px solid #fff; transform: :rotate(45deg) scale(0); transition:all 0.35 ease; transition-delay: :0.15s; opacity:0;}
+.checkbox  input:checked ~ .icon{
+                border-color:transparent;
+                background:#6f04cc;
+                animation:jelly 0.6s ease;
+               }
+.checkbox input:checked ~ .icon::after{
+                 opacity:1;
+                 transform:rotate(45deg) scale(1); 
+                }
+@keyframes jelly{
+    from{transform: scale(1, 1);}
+    30%{transform: scale(1.25, 0.75);}
+    40%{transform: scale(0.75, 1.25);}
+    50%{transform: scale(1.15, 0.85);}
+    65%{transform: scale(0.95, 1.05);}
+    75%{transform: scale(1.05, 0.95);}
+    to{transform:scale(1,1);}
+}
+.ok{width:100%;  height:30px;  border-bottom:1px solid #999; margin:20px 10px;}
+.ok > p{color:#555; margin-bottom:12px; font-size:0.9rem;}
+.out{margin-bottom:60px;}
+.out a{color:#222; text-decoration:underline; margin:10px; font-weight:600;}
+/*회원탈퇴 팝업창*/
+.cencel{width:400px; height:190px; position:absolute; top:65%; left:50%;
+    transform:translate(-50%,-50%);box-shadow: 0px 0px 5px 5px #dcdcdc; background:#fff; display:none;}
+.cencel > a >img{width:20px; height:20px; float:right; margin:10px;}
+.cencel > p {font-size:1.1rem; font-weight:700; line-height:30px;  margin-top:30px; padding:10px;}
+.chage_form_out{width:100%; height:40px; padding-left:11px; }
+.chage_form_out select{width:25%; height:30px; border:1px solid #ccc; margin-bottom:15px; vertical-align:middle;}
+.chage_form_out input[type="text"]{ width:70%; height:30px; border:1px solid #ccc; margin-bottom:15px; vertical-align:middle;}
+.join_out{text-align:right;}
+.mb{font-size:0.6rem;color:#fff;}
+.idontknow , .no {border:1px solid #999; padding:5px 27px; margin-left:2px;
+               background:#fff; text-align:center;}
+.idontknow:hover{background:#333; color:#fff; border:1px solid #333;}
+.no:hover{background:#333; color:#fff; border:1px solid #333;}
+/*팝업창*/
+/*popup1*/
+ html{position:relative;}
+.popup_bg{width:100%; height:100%; background:rgba(0,0,0,0.6); position:absolute; top:0; left:0;  display:none;}
+.popup{width:1000px; height:1080px; background:#fff; border:1px solid #333; position:absolute; top:35%; left:50%; transform:translate(-50%,-50%); display:none;}
+.popup h2{width:90%; margin-top:20px; margin-left:33px; }
+.popup h2 img{ display:block; padding:10px 0; margin:0 auto;}
+.close{position:absolute; top:20px; right:20px; width:23px;}
+
+/*popup1 membership_table*/
+.membership_table{width:90%; height:710px; margin:30px auto; text-align:center; border-top:1px solid #333; border-bottom:1px solid #333; border-collapse:collapse;}
+.membership_table th{padding:0 8px; background:#F6F6F6; border:1px solid #e4e4e4;  }
+.membership_table td{padding:0 3px; border:1px solid #e4e4e4;}
+.purple{color:#6f04cc;}
+.purple > th:nth-child(1){color:#222;}
+
+/*popup1 notice*/
+.popup > h3{width:90%; margin:5px auto; text-align:left;}
+.notice{font-size:0.9rem; color:#494949; width:90%; margin:5px auto; line-height:26px;}
+.notice li:nth-child(5){font-size:1rem; padding:5px 0; font-weight:700; color:#222;}
+
+/*coupon*/
+.coupon{width:45%; height:370px; background:#fff; border:1px solid #333; position:absolute; top:30%; left:50%; transform:translate(-50%,-50%); display:none;}
+.coupon_box> a > .close2{ width:23px; position:absolute; top:20px; right:20px;}
+.coupon_box> h4{width:80%; margin-top:20px; margin-left:65px;}
+.coupon_box > h4 >img{display:block; padding:10px 0; margin:0 auto;}
+.coupon_table{width:90%; height:180px; margin:20px auto; text-align:center; border-collapse:collapse; }
+.coupon_table th{padding:0 5px; background:#F6F6F6; border:1px solid #e4e4e4;  }
+.coupon_table td{padding:0 3px; border:1px solid #e4e4e4;}
+
+/*pagingnation*/
+.paging {text-align: center; padding-top:20px;}
+.paging li {display: inline-block; vertical-align:middle;}
+.paging li a{color:#898786; font-size:1.2rem; text-decoration:none; font-weight:600; display:block;width:30px; height:30px; line-height:30px;}
+.paging li.on a, .paging li a:hover {color:#3d3d3d; text-decoration:underline;}
+.paging li.prev a ,.paging li.next a {overflow:hidden; display:block; width:21px; height:21px; color:transparent; margin:0 2px;}
+.paging li.prev a {background:url(../image2/left.png)  no-repeat center; margin-right:21px;}
+.paging li.next a {background:url(../image2/right.png)  no-repeat center;  margin-left:21px;}
+
+/*미디어쿼리 반응형*/
+@media screen and (max-width:1440px) {
+    #wrap{width:80%;}
+    .no6 {width:98%;}
+     #mycontent .mycontent_in1 {width:45%;}
+    section .mybox li{height:237px;}
+    section .mybox li a {padding:80px;}
+    .popup{width:85%; height:880px;}
+    .membership_table{width:98%; height: 510px;}
+    .popup_bg{background-color:rgba(255,255,255,0);}
+    .coupon{width:65%; }
+    .coupon_table{width:95%;}
+    .login_in > .sns_ic li >img {width: 28px;}
+}
+@media screen and (max-width:1024px) {
+     html{font-size:90%;}
+     #wrap{width:85%; margin-top: 200px;}
+     #mycontent{margin-top: 200px;}
+     mycontent_in1 .no6 > a >span {font-size: 2.9rem;}
+     .mycontent_in_box span {font-size: 2.8rem;}
+     #mycontent .mycontent_in1 a>.click{margin-right:50px;}
+     #mycontent .mycontent_in1 {width:50%;}
+    .custom_bnt, .adr_bnt2 , .adr_cont > button{height:35px;}
+    .custom_bnt a , .adr_bnt2 a{line-height:35px;}
+    .popup{width:95%; height:880px;}
+    .popup_bg{width:100%; }
+    .membership_table td {padding:0px;}
+    .coupon{width:80%;}
+    .coupon_box> h4{margin-left:60px;}
+    .coupon_box > h4 >img{width:30%;}
+    .paging {padding-bottom:50px;} 
+	.login_in > .log_cont >.sp1 { padding-right: 110px;}
+    .login_in > .log_cont >.sp2 {padding-right: 113px;}
+}
+@media screen and (max-width:768px) {    
+     #wrap{width:90%; margin-top:130px;}
+    #mycontent{margin-top: 130px;}
+    .no6{width:60%; top:21%; height:70px;}
+    .mycontent_in1 .no6 > a >span {font-size: 2.5rem;}
+    .mycontent_in_box span {font-size: 2.5rem;}
+    .mycontent_in1 p {padding-bottom:0;}
+    #mycontent .mycontent_in1{width:45%;}
+    #mycontent .mycontent_in1 a>.click{margin-right:10%; width:95%;}
+    .mycontent_in2 {width: 25%;}
+    .mycontent_in_box {width: 100%;}
+    .mycontent_in_box p {padding-top:40px;}
+    .hidden_adr {width:480px;}
+    .popup{ font-size:80%;  width:100%; height:780px;position:absolute; top:6%; left:0%; transform:translate(0%,0%);}
+    .membership_table{width:100%; height:450px;}
+    .popup h2{margin-left:13px;}
+    .popup h2 img{width:38%;}
+    .close {width:16px;}
+    .coupon_box> a > .close2 {width: 16px;}
+    .coupon{font-size:90%; width:90%;}
+    .coupon_table{height:160px;}
+    .coupon_box> h4{margin-left:47px;}
+    .coupon_box > h4 >img{width:30%;}
+}
+@media screen and (max-width:600px) {
+     #wrap{width:95%;}
+     #mycontent .mycontent_in1 {width:48%;}
+    .hidden_adr {width:400px; height:400px;}
+    .hidden_adr > p {margin: 0 2.8%;font-size: 0.8rem;}
+    .searcch_inf {margin: 1% 2.8%;}
+    .login_in > .log_tit , .custom_in > .custom_tit ,.adr_in > .adr_tit{width: 16%;}
+    .adr_box2 , .adr_bnt2, .custom_bnt{margin-left:16%;}
+    .ok > p{font-size:0.8rem;}
+    .dl_img > a >img {width: 18px; height: 18px;}
+    .checkbox .icon{width:18px; height:18px;}
+    .checkbox .icon::after {top: 1px;left: 5px;width: 4px; height: 10px;}
+    .custom_bnt, .adr_bnt2 , .adr_cont > button{height:33px;}
+    .custom_bnt a , .adr_bnt2 a{line-height:33px;}
+    .custom_bnt{width:200px;}
+    .adr_cont > button {width:110px;}
+     #mycontent .mycontent_in1 a>.click{width: 100%;}
+    .chage_form , .chage_form2{margin-left:16%;}
+}
+@media screen and (max-width:480px) {   
+    html{font-size:80%;}
+     #wrap{margin-top:80px;}
+    #mycontent {height:158px; margin-top:65px;}
+    #mycontent .mycontent_in1 {width:37%;}
+    .no6 {width: 80%;}
+    .mycontent_in1 .no6 > a >span {font-size: 2.1rem;}
+    .mycontent_in_box span {font-size: 2.1rem;}
+    .hidden_adr {margin:10px auto; width:360px; height:360px;}
+    .hidden_adr form { padding:12px 0;}
+    .hidden_adr form input[type="text"]{width:90%; height:35px;}
+    .hidden_adr form input[type="submit"]{display:none;}
+    .popup h2 img {display: block; padding: 10px 0; margin: 0 auto; width:48%;}
+    .membership_table th {padding: 1px;}
+    .popup{ font-size:60%;  width:100%; height:830px; position:absolute; top:3.2%; left:0%; transform:translate(0%,0%);}
+    .login_in > .log_cont >.sp1{padding-right:80px;}
+    .login_in > .log_cont >.sp2 {
+    padding-right: 56px;}
+    .membership_table th {padding: 0 2px;}
+    .popup h2{margin-left:6px;}
+    .coupon{font-size:85%; width:95%;  top:10%; left:0%; transform:translate(0%,0%);}
+    .coupon_box> h4{margin-left:32px;}
+    .coupon_table {width: 100%; height:150px;}
+    .ok {height: 40px;}
+    .adr_cont > button {width: 140px;}
+}
+@media screen and (max-width:420px) {
+    html{font-size:76%;}
+    #wrap{width:97%;}
+    #mycontent{width:97%; margin:10px auto; height: 138px;}
+    .no6 {width: 92%;}
+    #mycontent .mycontent_in1{width:42%; height:128px;}
+    #mycontent .mycontent_in1 a>.click{width:100%;}
+    .mycontent_in_box p { padding-top:30px;}
+    .popup{ font-size:56%;}
+    .close {width:13px;}
+    .coupon_box> a > .close2 {width: 13px;}
+    .paging li.prev a, .paging li.next a{width:16px; height:16px;}
+     .paging li.prev a { margin-right: 8px;}
+     .paging li.next a {margin-left: 8px;}
+    .coupon{font-size:70%; width:98%;}
+    .coupon_table th {padding: 0 2px;}
+    .login_in > .log_cont{width: 100%;}
+    .login_in > .log_tit {width: 28%;}
+    .custom_in > .custom_tit{width:18%;}
+    .login_in > .log_cont >.sp1 { padding-right: 37px;}
+    .login_in > .log_cont >.sp2 {padding-right: 22px;}
+    .login_in > .sns_ic li >img {width: 25px;}
+    .adr_cont > button {width: 130px;}
+    .adr_in > .adr_tit {width: 16%;}
+    .adr_box2 {width: 220px;}
+    .cencel > a >img { width: 16px; height: 16px;}
+    .cencel {width: 320px; height: 190px;}
+    .adr_cont > button {width: 145px;}
+   .hidden_adr {margin:10px auto; width:300px; height:400px;}
+    .chage_form , .chage_form2{margin-left:21%;}
+    .chage_form input[type="text"]{width: 90%;}
+}
